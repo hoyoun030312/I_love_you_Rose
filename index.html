@@ -4,25 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; padding: 40px 20px; display: flex; justify-content: center; background-color: #fdfaf1; font-family: 'Nanum Pen Script', cursive, sans-serif; }
-        .container { width: 100%; max-width: 560px; text-align: center; }
-        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px; background-color: #000; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .letter-paper { background-color: #ffffff; background-image: linear-gradient(#f0f0f0 1px, transparent 1px); background-size: 100% 2.8rem; line-height: 2.8rem; padding: 1.5rem 2.5rem; min-height: 450px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; font-size: 1.5rem; color: #4a4238; border: 1px solid #eee; white-space: pre-wrap; }
+        /* 전체 배경: 아이보리 */
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            background-color: #fdfaf1; 
+            /* 동글동글 귀여운 폰트 적용 */
+            font-family: 'Gaegu', cursive;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* 유튜브 영상 상단 배치 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 줄노트 편지지: 내용에 따라 무한 확장 */
+        .letter-paper {
+            background-color: #ffffff;
+            /* 줄노트 배경: 줄 간격을 폰트 크기에 맞춰 최적화 */
+            background-image: linear-gradient(#f0f0f0 1px, transparent 1px);
+            background-size: 100% 2.2rem; 
+            line-height: 2.2rem;
+            
+            padding: 2rem;
+            min-height: 400px; /* 기본 높이 */
+            height: auto;      /* 내용 많으면 자동으로 늘어남 */
+            
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: left;
+            
+            /* 폰트 크기 조절: 너무 크지 않게 */
+            font-size: 1.25rem; 
+            color: #444;
+            border: 1px solid #eee;
+            
+            /* 줄바꿈 및 단어 끊김 방지 */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+
+        .instruction {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #7a6b5d;
+            font-weight: bold;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/m8GUd92kRsM" allowfullscreen></iframe>
         </div>
-        <div style="font-size: 1.4rem; margin-bottom: 20px; color: #7a6b5d; font-weight: bold;">노래를 틀고 아래 편지를 읽어줘 🎵</div>
+
+        <div class="instruction">Listen to the Song 🎵</div>
+
         <div class="letter-paper">
-안녕! 오늘 너의 생일을 정말 축하해.
-(여기에 편지 내용을 적으세요!)
+안녕! 오늘 네 생일을 정말 축하해.
+
+여기에 편지를 길게 적으셔도 됩니다.
+내용이 길어지면 편지지가 아래로 자동으로 늘어나니까 걱정 마세요!
+
+글씨체도 동글동글하고 귀여운 스타일로 바꿨는데 마음에 들었으면 좋겠네.
+오늘 하루 세상에서 제일 행복하게 보내길 바라!
+
+- 너의 소중한 친구가 -
         </div>
     </div>
+
 </body>
 </html>
